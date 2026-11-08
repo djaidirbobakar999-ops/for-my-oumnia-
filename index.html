@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Gift For You 💌</title>
+    <meta name="title" content="A Gift For You 💌" />
+    <meta name="description" content="A special little gift just for you ♡" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A Gift For You 💌" />
+    <meta property="og:description" content="A special little gift just for you ♡" />
+    <meta property="og:image" content="og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- خطوط عربية وإنجليزية راقية -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Caveat:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" crossorigin href="assets/index-Cmmc_-CL.css">
+
+    <style>
+      /* زر تشغيل الموسيقى في our song */
+      ._playBtn_joj9j_105 {
+        width: 52px !important;
+        height: 52px !important;
+        border-radius: 50% !important;
+        border: 2.5px solid #ffffff !important;
+        background: linear-gradient(135deg, #ff758c 0%, #ff4d79 100%) !important;
+        color: #ffffff !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.25rem !important;
+        flex-shrink: 0 !important;
+        box-shadow: 0 6px 18px rgba(255, 77, 121, 0.45), 0 0 0 3px rgba(255, 182, 193, 0.5) !important;
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      }
+      ._playBtn_joj9j_105:hover {
+        transform: scale(1.12) !important;
+        background: linear-gradient(135deg, #ff4d79 0%, #d81b60 100%) !important;
+        box-shadow: 0 8px 25px rgba(255, 77, 121, 0.6), 0 0 0 5px rgba(255, 182, 193, 0.7) !important;
+      }
+      ._playBtn_joj9j_105:active {
+        transform: scale(0.92) !important;
+      }
+      ._playerBar_joj9j_92 {
+        background: #ffffff !important;
+        border: 2px solid var(--red-pale) !important;
+        box-shadow: 0 6px 24px rgba(255, 77, 121, 0.18) !important;
+        padding: 12px 20px !important;
+        border-radius: 40px !important;
+      }
+
+      /* ==================== تصميم كتاب الرسالة وصفحاته ==================== */
+      .book-container {
+        width: 100%;
+        max-width: 520px;
+        perspective: 1000px;
+        margin: 0.5rem auto;
+      }
+      .book-page-card {
+        background: #ffffff;
+        border: 2px solid var(--red-pale);
+        border-radius: 26px;
+        padding: 1.6rem 1.3rem;
+        box-shadow: 0 10px 32px rgba(255, 77, 121, 0.16);
+        min-height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        animation: flipIn 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+        background-image: radial-gradient(#ffe4ec 1.2px, transparent 1.2px);
+        background-size: 16px 16px;
+      }
+      @keyframes flipIn {
+        0% { opacity: 0; transform: rotateY(-16deg) scale(0.95); }
+        100% { opacity: 1; transform: rotateY(0) scale(1); }
+      }
+      .letter-arabic-text {
+        font-family: 'Tajawal', sans-serif;
+        font-size: 1.08rem;
+        line-height: 1.85;
+        color: #3c1e28;
+        text-align: right;
+        direction: rtl;
+        font-weight: 500;
+        margin: 0.5rem 0;
+      }
+      .hl-pink {
+        color: #ff3366;
+        font-weight: 700;
+        text-shadow: 0 0 12px rgba(255, 77, 121, 0.25);
+      }
+      .hl-gold {
+        color: #e65100;
+        font-weight: 700;
+      }
+      /* العبارات الإنجليزية الطافية */
+      .floating-english-card {
+        background: linear-gradient(135deg, #fff2f6 0%, #ffe4ec 100%);
+        border: 1.5px dashed #ff4d79;
+        border-radius: 18px;
+        padding: 1rem 1.1rem;
+        margin: 0.8rem 0;
+        font-family: 'Caveat', cursive;
+        font-size: 1.32rem;
+        line-height: 1.45;
+        color: #d81b60;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(255, 77, 121, 0.16);
+        animation: floatBadge 3.2s ease-in-out infinite;
+        letter-spacing: 0.02em;
+      }
+      @keyframes floatBadge {
+        0%, 100% { transform: translateY(0px) rotate(-0.5deg); }
+        50% { transform: translateY(-7px) rotate(0.8deg); }
+      }
+
+      /* أزرار التنقل بين الصفحات */
+      .book-nav-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding-top: 0.8rem;
+        border-top: 1.5px dashed var(--red-pale);
+        width: 100%;
+      }
+      .book-btn {
+        font-family: 'Tajawal', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        padding: 0.45rem 1.1rem;
+        border-radius: 50px;
+        border: 1.5px solid var(--red);
+        background: #ffffff;
+        color: var(--red);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 3px 10px rgba(255, 77, 121, 0.15);
+        transition: all 0.25s ease;
+      }
+      .book-btn:hover:not(:disabled) {
+        background: var(--red);
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 16px rgba(255, 77, 121, 0.35);
+      }
+      .book-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        border-color: #e0e0e0;
+        color: #a0a0a0;
+        box-shadow: none;
+      }
+      .book-page-dots {
+        font-family: 'Tajawal', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--red-dark);
+      }
+    </style>
+
+    <script type="module">
+      // 🌸 عبارات الورد الثمانية
+      const myPoems = [
+        'I love you and every little thing about you ♡',
+        'I get lost in your eyes nothing else compares nti sa7 oumnia ✨',
+        'Everything sweet and beautiful reminds me of you 🌷 ',
+        'The mother of my future kids️ 🥺💗 ',
+        ' 9albi w 3omri nti el dfa nti my home 🥺💗 ',
+        'My wife and my little baby  🫂💗 ',
+        'My whole world and everything in it 💫',
+        'My family my home my everything, and my Oumnia 🪷 '
+      ];
+
+      // 💌 صفحات كتاب الرسالة الخمس المنسقة
+      window.__letterPages = [
+        // الصفحة 1
+        `<div>
+          <p class="letter-arabic-text">
+            يا <span class="hl-pink">أجمل أقداري</span> و <span class="hl-pink">أجمل نعمة</span> وهبني الله إياها 💗🥺
+          </p>
+          <div class="floating-english-card">
+            "i don't think you truly realize how much you mean to me.. i wish you could see yourself through my eyes just for a moment so you could understand how precious you are to my heart 💗🫂"
+          </div>
+          <p class="letter-arabic-text">
+            نشكرك بزاف لأنك <span class="hl-pink">أمنية</span> 🥹 و وليتي <span class="hl-pink">أمنيتي</span>.. شكراً على كل لحظة عطيتيني فيها حبك، وعلى كل مرة حاولتي فيها رغم التعب تاعك، وعلى كل لحظة بقيتي فيها قوية حتى وين كانت الحياة ضدك ومهيش مساعفاتك.. مقدر كل شيء يا <span class="hl-pink">بطلتي نتي و قدوتي</span>.. يو ار ماي فيفرت هيرو 🥺🌷.
+          </p>
+        </div>`,
+
+        // الصفحة 2
+        `<div>
+          <p class="letter-arabic-text">
+            شكراً بزاف لأنك <span class="hl-pink">دخلتي لحياتي</span> وخليتي معنى لبزاف حوايج مكانش علابالي بيها 💗🫂🥺.
+          </p>
+          <p class="letter-arabic-text">
+            باغيك تعرفي حاجة صغيرة يا <span class="hl-pink">روحي نتي</span>.. مش لازم عليك تكوني قوية كل الوقت، ومش لازم عليك تخبي حزنك ولا تمثلي بلي راكي لباس علاجالي 🥺.. تقدري تتعبي وتحزني وتبكي وتفوتي أيام ما تشبهلكش يا <span class="hl-pink">جميلة انت</span> 🥺🫂
+          </p>
+          <div class="floating-english-card">
+            "i will never love you only on your happy days, i love you in every version of you.. even on the days when you struggle to love yourself 🥺🫂 you are forever my little angel 💗🫶🏻🥹"
+          </div>
+        </div>`,
+
+        // الصفحة 3
+        `<div>
+          <p class="letter-arabic-text">
+            <span class="hl-gold">متفقديش الأمل</span> و متيأسيش مهما كانت ليام ثقيلة.. <span class="hl-pink">الصعيب ما يدومش ديما</span> يا روحي نتي 🥺🫂 يجي يوم نشوفو كلش وش فوتنا ونحمدو ربي كي فوتناه على خير 🥺
+          </p>
+          <div class="floating-english-card">
+            "better days are coming amouna 🥹💗 i believe in you even on the days when you can't believe in yourself 🫂"
+          </div>
+          <p class="letter-arabic-text">
+            نتمنى لوكان نقدر نهز على قلبك كل وش مثقلو ونوريك <span class="hl-pink">مكيش وحدك</span> وشحال تستاهلي من طمأنينة و الفرحة.. بصح كل وش نقدر نديرو ضوكا اني حنبذل كامل جهدي باش نكون معاك و الى جانبك و <span class="hl-pink">نساندك و نسمعلك</span> ونفكرك ديما بلي مكيش وحدك يا روحي 🥺🫂
+          </p>
+        </div>`,
+
+        // الصفحة 4
+        `<div>
+          <p class="letter-arabic-text">
+            وحاجة لي حاب نحط عليها <span class="hl-pink">ألف سطر</span> و نظهرهالك.. اني نحوس نشكرك لأنك <span class="hl-pink">أمنية</span> ليس كشخص فقط انتي حقاً أمنية.. وشكراً أنك <span class="hl-pink">حبيبتي</span> و الشخص لي اختارو قلبي بين قاع الناس في العالم 🥺🫂
+          </p>
+          <p class="letter-arabic-text">
+            معلاباليش شحال من ليام بقالنا فهاذي الدنيا ولا وش يستنانا بصح علابالي اني راح نبغيك فكل يوم منها <span class="hl-pink">الى آخر نفس يخرج من ريتي</span> 🥺💗
+          </p>
+          <div class="floating-english-card">
+            "you are not just someone I love, you are someone I am endlessly grateful for.. and if i had to choose all over again in a thousand different lifetimes, my heart would still find its way to you 🥹🫂"
+          </div>
+        </div>`,
+
+        // الصفحة 5
+        `<div>
+          <div class="floating-english-card">
+            "i will love you through every season, every storm, every sunrise and every sunset.. not just for now, not just for a lifetime, but for as long as my heart knows how to love 🥺💗"
+          </div>
+          <p class="letter-arabic-text" style="font-size: 1.25rem; text-align: center; margin: 1rem 0;">
+            نحبك <span class="hl-pink">أمونتي</span> أكثر مما تقدر الكلمات تحكي وتوصف، وأكثر مما تقدر الرسائل والحروف تهز 🥺💋
+          </p>
+          <div class="floating-english-card" style="font-size: 1.55rem; color: #ff3366; border-color: #ff3366;">
+            i love you amouna ♡
+          </div>
+          <div style="text-align: right; margin-top: 1.2rem; font-family: 'Tajawal', sans-serif;">
+            <p style="font-size: 0.95rem; color: var(--text-light); margin: 0;">I love you always,</p>
+            <p style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: var(--red); font-weight: 700; margin: 0;">Mounir ♡</p>
+          </div>
+        </div>`
+      ];
+
+      // منع تداخل الأغنيتين
+      const _nativePlay = HTMLMediaElement.prototype.play;
+      window.__activeAudios = new Set();
+      HTMLMediaElement.prototype.play = function() {
+        window.__activeAudios.forEach(aud => {
+          if (aud !== this && !aud.paused) aud.pause();
+        });
+        window.__activeAudios.add(this);
+        return _nativePlay.apply(this, arguments);
+      };
+
+      async function loadCustomGift() {
+        try {
+          const res = await fetch("assets/index-Duhwop06.js");
+          let code = await res.text();
+
+          // 1. الكود 2505 والتلميح
+          code = code.replace('code:"1122"', 'code:"2505"');
+          code = code.replace('"no try 1122"', '"perhaps the sky remembers the day the sun met the moon"');
+
+          // 2. الاسم في الترحيب
+          code = code.replace('name:"my love"', 'name:"Oumnia"');
+
+          // 3. تحديث أسماء القوائم والعناوين
+          code = code.replace(/label:`Captured[\s\S]*?Memories`/, 'label:`our\\nmemories`');
+          code = code.replace(/label:`Virtual[\s\S]*?Flowers`/, 'label:`flowers for\\nOumnia`');
+          code = code.replace(/label:`Love[\s\S]*?Letter`/, 'label:`to my little\\nangel`');
+          code = code.replace('flowers:{title:"for you"', 'flowers:{title:"flowers for Oumnia"');
+
+          // 4. وضع عبارات الورد الثمانية
+          code = code.replace(/poems:\[[\s\S]*?\]/, 'poems:' + JSON.stringify(myPoems));
+
+          // 5. تفاصيل الأغنية الأولى (Iris)
+          code = code.replace('songTitle:"our song"', 'songTitle:"ॐnia 🥺"');
+          code = code.replace('artist:"for you 🎵"', 'artist:"iris is an angel just like you 🥺🎵"');
+          code = code.replace('highlight:"every lyric feels like us 💕"', 'highlight:"And I\'d give up forever to touch you... 💕"');
+
+          // 6. 3 صور فقط للذكريات
+          const oldPhotos = 'images:[{src:"/images/memory1.jpg",label:"❤️",tag:"my fav"},{src:"/images/memory2.jpg",label:"❤️",tag:"cute"},{src:"/images/memory3.jpg",label:"❤️",tag:"forever"},{src:"/images/memory4.jpg",label:"❤️",tag:"love"},{src:"/images/memory5.jpg",label:"❤️",tag:"always"},{src:"/images/memory6.jpg",label:"❤️",tag:"mine"},{src:"/images/memory7.jpg",label:"❤️",tag:"us"}]';
+          const newPhotos = 'images:[{src:"./memory1.jpg",label:"🥺",tag:"my fav"},{src:"./memory2.jpg",label:"🥹",tag:"forever"},{src:"./memory3.jpg",label:"️🙈",tag:"usssss"}]';
+          code = code.replace(oldPhotos, newPhotos);
+
+          // 7. مسارات الصور للأصل
+          code = code.replaceAll('/images/', './');
+
+          // 8. مسارات الأغاني داخل مجلد music
+          code = code.replace('music:"/music/music.mp3"', 'music:"./music/music2.mp3"');
+          code = code.replace('audioSrc:"/music/music.mp3"', 'audioSrc:"./music/music.mp3"');
+
+          // 9. مزامنة أزرار التشغيل
+          code = code.replace(
+            'a.addEventListener("canplaythrough",()=>s(!0))',
+            'a.addEventListener("canplaythrough",()=>s(!0)),a.addEventListener("pause",()=>r(!1)),a.addEventListener("play",()=>r(!0))'
+          );
+          code = code.replace(
+            'd.addEventListener("loadedmetadata",()=>{u(d.duration)})',
+            'd.addEventListener("loadedmetadata",()=>{u(d.duration)}),d.addEventListener("pause",()=>s(!1)),d.addEventListener("play",()=>s(!0))'
+          );
+
+          // 10. استبدال مكون الرسالة القديم بكتاب الصفحات التفاعلي الجديد
+          const customBookComponent = `function _k({back:e}){
+            const [p,setP]=P.useState(0);
+            const pages=window.__letterPages||[];
+            return P.createElement("div",{className:Re.page},
+              P.createElement("div",{className:Re.inner},
+                P.createElement("div",{className:Re.dashedTop}),
+                P.createElement("div",{className:Re.kittyCakeWrapper},
+                  P.createElement("img",{src:"./hello-kitty-cake.jpg",alt:"Hello Kitty",className:Re.kittyCakeImg})
+                ),
+                P.createElement("div",{className:"book-container"},
+                  P.createElement("div",{
+                    className:"book-page-card",
+                    key:p,
+                    dangerouslySetInnerHTML:{__html:pages[p]||""}
+                  }),
+                  P.createElement("div",{className:"book-nav-controls"},
+                    P.createElement("button",{
+                      className:"book-btn",
+                      onClick:()=>setP(c=>Math.max(0,c-1)),
+                      disabled:p===0
+                    },"السابق ⬅️"),
+                    P.createElement("span",{className:"book-page-dots"},(p+1)+" / "+pages.length+" 💖"),
+                    P.createElement("button",{
+                      className:"book-btn",
+                      onClick:()=>setP(c=>Math.min(pages.length-1,c+1)),
+                      disabled:p===pages.length-1
+                    },"التالي ➡️")
+                  )
+                ),
+                P.createElement("div",{className:Re.dashedBottom}),
+                P.createElement("div",{className:Re.footer},
+                  P.createElement("h2",{className:Re.title,dir:"auto"},"to my little angel"),
+                  P.createElement("button",{className:"btn-return",onClick:e},"RETURN")
+                )
+              )
+            );
+          }`;
+
+          code = code.replace(/function _k\(\{back:e,content:t\}\)[\s\S]*?const Ck=/, customBookComponent + ';const Ck=');
+
+          // تشغيل الكود المعدل
+          const blob = new Blob([code], { type: "text/javascript" });
+          const scriptUrl = URL.createObjectURL(blob);
+          await import(scriptUrl);
+        } catch (err) {
+          console.error("Error loading customized bundle:", err);
+        }
+      }
+      loadCustomGift();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
